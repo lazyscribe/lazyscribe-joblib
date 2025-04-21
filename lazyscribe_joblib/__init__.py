@@ -5,12 +5,12 @@ from __future__ import annotations
 from datetime import datetime
 from typing import Any, ClassVar
 
+import joblib
 from attrs import define, field
 from importlib_metadata import packages_distributions
 from importlib_metadata import version as importlib_version
 from lazyscribe._utils import utcnow
 from lazyscribe.artifacts.base import Artifact
-from lazyscribe.exception import ArtifactError
 from slugify import slugify
 
 __all__: list[str] = ["JoblibArtifact"]
@@ -114,14 +114,8 @@ class JoblibArtifact(Artifact):
         except KeyError as err:
             raise ValueError(f"{package} was not found.") from err
 
-        try:
-            import joblib
-        except ImportError as err:
-            raise ArtifactError(
-                "Please install ``joblib`` to use this handler."
-            ) from err
         created_at = created_at or utcnow()
-        return cls(
+        return cls(  # type: ignore[call-arg]
             name=name,
             value=value,
             fname=fname

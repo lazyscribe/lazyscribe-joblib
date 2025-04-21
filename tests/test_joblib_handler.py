@@ -4,6 +4,7 @@ import zoneinfo
 from datetime import datetime
 
 import joblib
+import numpy as np
 import pytest
 import sklearn
 import time_machine
@@ -75,8 +76,6 @@ def test_joblib_handler_invalid_package():
 
 def test_joblib_handler_raise_attribute_error():
     """Test that the joblib handler raises an error for objects where the package can't be determined."""
-    numpy = pytest.importorskip("numpy")
-
-    myarr = numpy.array([])
+    myarr = np.array([])
     with pytest.raises(AttributeError):
         JoblibArtifact.construct(name="My array", value=myarr)
