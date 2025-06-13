@@ -17,41 +17,15 @@ classifiers = [
 	"Programming Language :: Python :: 3.12",
 	"Programming Language :: Python :: 3.13",
 ]
-dependencies = [
-    "attrs<=25.1.0,>=21.2.0",
-    "lazyscribe<=1.1.0,>=1.0.0",
-    "joblib<=1.4.2,>=1.2.0",
-    "python-slugify<=8.0.4,>=5.0.0",
-]
+dependencies = ["attrs<=25.1.0,>=21.2.0", "lazyscribe<=1.1.0,>=1.0.0", "joblib<=1.5.1,>=1.2.0", "python-slugify<=8.0.4,>=5.0.0"]
 
 dynamic = ["readme", "version"]
 
 [project.optional-dependencies]
-build = [
-    "build",
-    "commitizen",
-    "twine",
-    "wheel"
-]
-qa = [
-    "edgetest",
-    "mypy",
-    "pre-commit",
-    "ruff",
-    "types-python-slugify",
-    "uv",
-]
-tests = [
-    "pytest",
-    "pytest-cov",
-	"scikit-learn",
-    "time-machine"
-]
-dev = [
-    "lazyscribe-joblib[build]",
-    "lazyscribe-joblib[qa]",
-    "lazyscribe-joblib[tests]"
-]
+build = ["build", "commitizen", "twine", "wheel"]
+qa = ["edgetest", "mypy", "pre-commit", "ruff", "types-python-slugify", "uv"]
+tests = ["pytest", "pytest-cov", "scikit-learn", "time-machine"]
+dev = ["lazyscribe-joblib[build]", "lazyscribe-joblib[qa]", "lazyscribe-joblib[tests]"]
 
 [project.urls]
 "Documentation" = "https://github.com/lazyscribe/lazyscribe-joblib"
