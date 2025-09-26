@@ -27,7 +27,7 @@ classifiers = [
 dependencies = [
     "attrs>=21.2.0,<=25.3.0",
     "joblib>=1.2.0,<=1.5.2",
-    "lazyscribe>=1.0.0,<2",
+    "lazyscribe",
     "python-slugify>=5.0.0,<=8.0.4",
 ]
 
@@ -111,3 +111,6 @@ command = "pytest tests"
 [tool.uv.build-backend]
 module-name = "lazyscribe_joblib"
 module-root = ""
+
+[tool.uv.sources]
+lazyscribe = { git = "https://github.com/lazyscribe/lazyscribe", branch = "develop" }

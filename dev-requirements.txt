@@ -78,7 +78,7 @@ joblib==1.5.2
     #   scikit-learn
 keyring==25.6.0
     # via twine
-lazyscribe==1.2.0
+lazyscribe @ git+https://github.com/lazyscribe/lazyscribe@b449507e587007ddca053e8daa2419cd9fcb6554
     # via lazyscribe-joblib (pyproject.toml)
 markdown-it-py==4.0.0
     # via rich
@@ -149,7 +149,7 @@ python-slugify==8.0.4
     # via
     #   lazyscribe-joblib (pyproject.toml)
     #   lazyscribe
-pyyaml==6.0.2
+pyyaml==6.0.3
     # via
     #   commitizen
     #   pre-commit
@@ -168,7 +168,7 @@ rfc3986==2.0.0
     # via twine
 rich==14.1.0
     # via twine
-ruff==0.13.1
+ruff==0.13.2
     # via lazyscribe-joblib (pyproject.toml)
 scikit-learn==1.7.2
     # via lazyscribe-joblib (pyproject.toml)
@@ -222,7 +222,7 @@ uv==0.8.13
     #   edgetest
 virtualenv==20.34.0
     # via pre-commit
-wcwidth==0.2.13
+wcwidth==0.2.14
     # via prompt-toolkit
 wheel==0.45.1
     # via lazyscribe-joblib (pyproject.toml)
