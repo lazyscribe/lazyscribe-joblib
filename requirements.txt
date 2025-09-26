@@ -10,7 +10,7 @@ importlib-metadata==8.7.0
     # via lazyscribe
 joblib==1.5.2
     # via lazyscribe-joblib (pyproject.toml)
-lazyscribe==1.2.0
+lazyscribe @ git+https://github.com/lazyscribe/lazyscribe@b449507e587007ddca053e8daa2419cd9fcb6554
     # via lazyscribe-joblib (pyproject.toml)
 python-slugify==8.0.4
     # via
