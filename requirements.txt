@@ -8,7 +8,7 @@ fsspec==2025.5.1
     # via lazyscribe
 importlib-metadata==8.7.0
     # via lazyscribe
-joblib==1.5.2
+joblib==1.5.3
     # via lazyscribe-joblib (pyproject.toml)
 lazyscribe==1.2.0
     # via lazyscribe-joblib (pyproject.toml)

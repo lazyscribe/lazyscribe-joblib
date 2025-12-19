@@ -25,10 +25,10 @@ classifiers = [
     "Programming Language :: Python :: 3.13",
 ]
 dependencies = [
-    "attrs>=21.2.0,<=25.3.0",
-    "joblib>=1.2.0,<=1.5.2",
-    "lazyscribe>=1.0.0,<=1.2.0,!=2",
-    "python-slugify>=5.0.0,<=8.0.4",
+    "attrs<=25.3.0,>=21.2.0",
+    "joblib<=1.5.3,>=1.2.0",
+    "lazyscribe!=2,<=1.2.0,>=1.0.0",
+    "python-slugify<=8.0.4,>=5.0.0",
 ]
 
 optional-dependencies.build = [ "build", "commitizen", "twine", "wheel" ]
@@ -50,6 +50,10 @@ optional-dependencies.tests = [ "pytest", "pytest-cov", "scikit-learn", "time-ma
 urls."Documentation" = "https://github.com/lazyscribe/lazyscribe-joblib"
 urls."Repository" = "https://github.com/lazyscribe/lazyscribe-joblib"
 entry-points."lazyscribe.artifact_type".joblib = "lazyscribe_joblib:JoblibArtifact"
+
+[tool.uv.build-backend]
+module-name = "lazyscribe_joblib"
+module-root = ""
 
 [tool.ruff]
 target-version = "py310"
@@ -107,7 +111,3 @@ version_files = [
 extras = [ "tests" ]
 upgrade = [ "attrs", "lazyscribe", "joblib", "python-slugify" ]
 command = "pytest tests"
-
-[tool.uv.build-backend]
-module-name = "lazyscribe_joblib"
-module-root = ""
