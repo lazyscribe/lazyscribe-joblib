@@ -59,6 +59,7 @@ class JoblibArtifact(Artifact):
         value: Any = None,
         fname: str | None = None,
         created_at: datetime | None = None,
+        expiry: datetime | None = None,
         writer_kwargs: dict | None = None,
         version: int = 0,
         dirty: bool = True,
@@ -121,6 +122,7 @@ class JoblibArtifact(Artifact):
             fname=fname
             or f"{slugify(name)}-{slugify(created_at.strftime('%Y%m%d%H%M%S'))}.{cls.suffix}",
             created_at=created_at,
+            expiry=expiry,
             writer_kwargs=writer_kwargs or {},
             version=version,
             dirty=dirty,
