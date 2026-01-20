@@ -3,8 +3,6 @@
 from __future__ import annotations
 
 from datetime import datetime
-from importlib.metadata import packages_distributions
-from importlib.metadata import version as importlib_version
 from typing import Any, ClassVar
 
 import joblib
@@ -12,6 +10,14 @@ from attrs import define, field
 from lazyscribe._utils import utcnow
 from lazyscribe.artifacts.base import Artifact
 from slugify import slugify
+
+try:  # noqa: RUF067
+    # Python <= 3.10
+    from importlib_metadata import packages_distributions
+    from importlib_metadata import version as importlib_version
+except ImportError:
+    from importlib.metadata import packages_distributions
+    from importlib.metadata import version as importlib_version
 
 __all__: list[str] = ["JoblibArtifact"]
 
