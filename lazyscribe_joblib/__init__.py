@@ -16,7 +16,7 @@ from slugify import slugify
 __all__: list[str] = ["JoblibArtifact"]
 
 
-@define(auto_attribs=True)
+@define(auto_attribs=True)  # noqa: RUF067
 class JoblibArtifact(Artifact):
     """Handler for pickle-serializable objects through ``joblib`` package.
 
