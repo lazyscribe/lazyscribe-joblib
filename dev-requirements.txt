@@ -122,7 +122,7 @@ prompt-toolkit==3.0.51
     # via
     #   commitizen
     #   questionary
-pycparser==2.23
+pycparser==3.0
     # via cffi
 pygments==2.19.2
     # via
