@@ -52,6 +52,7 @@ def test_joblib_handler(tmp_path):
             fname="EXCLUDED FROM COMPARISON",
             value=None,
             created_at=None,
+            expiry=None,
             writer_kwargs=None,
             package="sklearn",
             package_version=sklearn.__version__,

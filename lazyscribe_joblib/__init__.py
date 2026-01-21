@@ -7,16 +7,22 @@ from typing import Any, ClassVar
 
 import joblib
 from attrs import define, field
-from importlib_metadata import packages_distributions
-from importlib_metadata import version as importlib_version
 from lazyscribe._utils import utcnow
 from lazyscribe.artifacts.base import Artifact
 from slugify import slugify
 
+try:  # noqa: RUF067
+    # Python <= 3.10
+    from importlib_metadata import packages_distributions
+    from importlib_metadata import version as importlib_version
+except ImportError:
+    from importlib.metadata import packages_distributions
+    from importlib.metadata import version as importlib_version
+
 __all__: list[str] = ["JoblibArtifact"]
 
 
-@define(auto_attribs=True)
+@define(auto_attribs=True)  # noqa: RUF067
 class JoblibArtifact(Artifact):
     """Handler for pickle-serializable objects through ``joblib`` package.
 
@@ -59,6 +65,7 @@ class JoblibArtifact(Artifact):
         value: Any = None,
         fname: str | None = None,
         created_at: datetime | None = None,
+        expiry: datetime | None = None,
         writer_kwargs: dict | None = None,
         version: int = 0,
         dirty: bool = True,
@@ -121,6 +128,7 @@ class JoblibArtifact(Artifact):
             fname=fname
             or f"{slugify(name)}-{slugify(created_at.strftime('%Y%m%d%H%M%S'))}.{cls.suffix}",
             created_at=created_at,
+            expiry=expiry,
             writer_kwargs=writer_kwargs or {},
             version=version,
             dirty=dirty,

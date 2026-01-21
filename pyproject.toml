@@ -25,9 +25,10 @@ classifiers = [
     "Programming Language :: Python :: 3.13",
 ]
 dependencies = [
-    "attrs>=21.2.0,<=25.3.0",
-    "joblib>=1.2.0,<=1.5.2",
-    "lazyscribe>=1.0.0,<=1.2.0,!=2",
+    "attrs>=21.2.0,<=25.4.0",
+    "importlib-metadata>=4.7; python_version<'3.11'",
+    "joblib>=1.2.0,<=1.5.3",
+    "lazyscribe>=2.0.0,<3",
     "python-slugify>=5.0.0,<=8.0.4",
 ]
 
