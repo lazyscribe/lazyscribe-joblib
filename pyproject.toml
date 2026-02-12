@@ -1,12 +1,10 @@
 [build-system]
 build-backend = "uv_build"
-
 requires = [ "uv-build>=0.8.0,<0.9.0" ]
 
 [project]
 name = "lazyscribe-joblib"
-version = "0.1.1"
-
+version = "0.1.2"
 description = "Joblib-based artifact handlers for Lazyscribe"
 readme = { file = "README.md", content-type = "text/markdown" }
 license = { text = "MIT license" }
@@ -31,7 +29,6 @@ dependencies = [
     "lazyscribe>=2.0.0,<3",
     "python-slugify>=5.0.0,<=8.0.4",
 ]
-
 optional-dependencies.build = [ "build", "commitizen", "twine", "wheel" ]
 optional-dependencies.dev = [
     "lazyscribe-joblib[build]",
@@ -52,9 +49,12 @@ urls."Documentation" = "https://github.com/lazyscribe/lazyscribe-joblib"
 urls."Repository" = "https://github.com/lazyscribe/lazyscribe-joblib"
 entry-points."lazyscribe.artifact_type".joblib = "lazyscribe_joblib:JoblibArtifact"
 
+[tool.uv]
+build-backend.module-name = "lazyscribe_joblib"
+build-backend.module-root = ""
+
 [tool.ruff]
 target-version = "py310"
-
 lint.select = [
     "B",      # flake8-bugbear
     "C",      # flake8-comprehensions
@@ -108,7 +108,3 @@ version_files = [
 extras = [ "tests" ]
 upgrade = [ "attrs", "lazyscribe", "joblib", "python-slugify" ]
 command = "pytest tests"
-
-[tool.uv.build-backend]
-module-name = "lazyscribe_joblib"
-module-root = ""
