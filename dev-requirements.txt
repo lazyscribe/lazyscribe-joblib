@@ -26,11 +26,11 @@ click==8.3.1
     # via edgetest
 colorama==0.4.6
     # via commitizen
-commitizen==4.12.0
+commitizen==4.13.7
     # via lazyscribe-joblib (pyproject.toml)
-coverage==7.13.1
+coverage==7.13.4
     # via pytest-cov
-cryptography==46.0.3
+cryptography==46.0.5
     # via secretstorage
 decli==0.6.3
     # via commitizen
@@ -40,13 +40,13 @@ distlib==0.4.0
     # via virtualenv
 docutils==0.22.4
     # via readme-renderer
-edgetest==2026.1.0
+edgetest==2026.1.1
     # via lazyscribe-joblib (pyproject.toml)
-filelock==3.20.3
+filelock==3.21.0
     # via virtualenv
 fsspec==2025.12.0
     # via lazyscribe
-id==1.5.0
+id==1.6.1
     # via twine
 identify==2.6.16
     # via pre-commit
@@ -76,7 +76,7 @@ keyring==25.7.0
     # via twine
 lazyscribe==2.0.0
     # via lazyscribe-joblib (pyproject.toml)
-librt==0.7.8
+librt==0.8.0
     # via mypy
 markdown-it-py==4.0.0
     # via rich
@@ -96,20 +96,21 @@ nh3==0.3.2
     # via readme-renderer
 nodeenv==1.10.0
     # via pre-commit
-numpy==2.4.1
+numpy==2.4.2
     # via
     #   scikit-learn
     #   scipy
-packaging==25.0
+packaging==26.0
     # via
     #   build
     #   commitizen
     #   edgetest
     #   pytest
     #   twine
-pathspec==1.0.3
+    #   wheel
+pathspec==1.0.4
     # via mypy
-platformdirs==4.5.1
+platformdirs==4.6.0
     # via virtualenv
 pluggy==1.6.0
     # via
@@ -155,16 +156,15 @@ readme-renderer==44.0
     # via twine
 requests==2.32.5
     # via
-    #   id
     #   requests-toolbelt
     #   twine
 requests-toolbelt==1.0.0
     # via twine
 rfc3986==2.0.0
     # via twine
-rich==14.2.0
+rich==14.3.2
     # via twine
-ruff==0.14.13
+ruff==0.15.0
     # via lazyscribe-joblib (pyproject.toml)
 scikit-learn==1.8.0
     # via lazyscribe-joblib (pyproject.toml)
@@ -184,7 +184,7 @@ time-machine==3.2.0
     # via lazyscribe-joblib (pyproject.toml)
 toml-fmt-common==1.1.0
     # via pyproject-fmt
-tomlkit==0.13.3
+tomlkit==0.14.0
     # via
     #   commitizen
     #   edgetest
@@ -196,19 +196,20 @@ typing-extensions==4.15.0
     # via mypy
 urllib3==2.6.3
     # via
+    #   id
     #   requests
     #   twine
-uv==0.9.23
+uv==0.9.26
     # via
     #   lazyscribe-joblib (pyproject.toml)
     #   edgetest
 virtualenv==20.36.1
     # via pre-commit
-wcwidth==0.3.0
+wcwidth==0.6.0
     # via prompt-toolkit
-wheel==0.45.1
+wheel==0.46.3
     # via lazyscribe-joblib (pyproject.toml)
-wrapt==2.0.1
+wrapt==2.1.1
     # via deprecated
 zipp==3.23.0
     # via importlib-metadata
