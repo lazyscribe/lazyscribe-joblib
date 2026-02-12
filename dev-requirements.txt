@@ -42,9 +42,9 @@ docutils==0.22.4
     # via readme-renderer
 edgetest==2026.1.1
     # via lazyscribe-joblib (pyproject.toml)
-filelock==3.21.0
+filelock==3.21.1
     # via virtualenv
-fsspec==2025.12.0
+fsspec==2026.2.0
     # via lazyscribe
 id==1.6.1
     # via twine
@@ -74,7 +74,7 @@ joblib==1.5.3
     #   scikit-learn
 keyring==25.7.0
     # via twine
-lazyscribe==2.0.0
+lazyscribe==2.0.1
     # via lazyscribe-joblib (pyproject.toml)
 librt==0.8.0
     # via mypy
@@ -110,7 +110,7 @@ packaging==26.0
     #   wheel
 pathspec==1.0.4
     # via mypy
-platformdirs==4.6.0
+platformdirs==4.7.0
     # via virtualenv
 pluggy==1.6.0
     # via
