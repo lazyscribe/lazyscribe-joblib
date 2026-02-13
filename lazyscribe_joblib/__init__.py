@@ -116,10 +116,13 @@ class JoblibArtifact(Artifact):
                     "Please provide an argument for ``package``."
                 ) from err
 
-        try:
-            distribution = packages_distributions()[package][0]
-        except KeyError as err:
-            raise ValueError(f"{package} was not found.") from err
+        if (package_version := kwargs.get("package_version")) is None:
+            # Infer the version of the package based on the name
+            try:
+                distribution = packages_distributions()[package][0]
+                package_version = importlib_version(distribution)
+            except KeyError as err:
+                raise ValueError(f"{package} was not found.") from err
 
         created_at = created_at or utcnow()
         return cls(  # type: ignore[call-arg]
@@ -133,8 +136,7 @@ class JoblibArtifact(Artifact):
             version=version,
             dirty=dirty,
             package=package,
-            package_version=kwargs.get("package_version")
-            or importlib_version(distribution),
+            package_version=package_version,
             joblib_version=kwargs.get("joblib_version") or joblib.__version__,
         )
 
