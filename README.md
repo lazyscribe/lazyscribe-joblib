@@ -8,3 +8,8 @@
 
 Any object that can be written with `joblib.dump` and read with `joblib.load` is compatible with this
 handler. Note that we do persist the `joblib` version for runtime environment validation.
+
+# Contributions
+
+We welcome contributions! If you have a feature or bug fix, please open a PR to the `main` branch. We will
+rebase and merge into `main` before cutting a release.
