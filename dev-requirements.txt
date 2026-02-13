@@ -6,8 +6,6 @@ attrs==25.4.0
     # via
     #   lazyscribe-joblib (pyproject.toml)
     #   lazyscribe
-backports-tarfile==1.2.0
-    # via jaraco-context
 build==1.4.0
     # via lazyscribe-joblib (pyproject.toml)
 cerberus==1.3.8
@@ -42,7 +40,7 @@ docutils==0.22.4
     # via readme-renderer
 edgetest==2026.1.1
     # via lazyscribe-joblib (pyproject.toml)
-filelock==3.21.1
+filelock==3.21.2
     # via virtualenv
 fsspec==2026.2.0
     # via lazyscribe
@@ -52,8 +50,6 @@ identify==2.6.16
     # via pre-commit
 idna==3.11
     # via requests
-importlib-metadata==8.7.1
-    # via keyring
 iniconfig==2.3.0
     # via pytest
 jaraco-classes==3.4.0
@@ -110,7 +106,7 @@ packaging==26.0
     #   wheel
 pathspec==1.0.4
     # via mypy
-platformdirs==4.7.0
+platformdirs==4.7.1
     # via virtualenv
 pluggy==1.6.0
     # via
@@ -164,7 +160,7 @@ rfc3986==2.0.0
     # via twine
 rich==14.3.2
     # via twine
-ruff==0.15.0
+ruff==0.15.1
     # via lazyscribe-joblib (pyproject.toml)
 scikit-learn==1.8.0
     # via lazyscribe-joblib (pyproject.toml)
@@ -211,5 +207,3 @@ wheel==0.46.3
     # via lazyscribe-joblib (pyproject.toml)
 wrapt==2.1.1
     # via deprecated
-zipp==3.23.0
-    # via importlib-metadata
