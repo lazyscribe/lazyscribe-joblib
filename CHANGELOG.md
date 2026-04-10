@@ -1,3 +1,9 @@
+## v0.2.0 (2026-04-10)
+
+### Feat
+
+- adding serialization support
+
 ## v0.1.2 (2026-02-12)
 
 ### Fix
