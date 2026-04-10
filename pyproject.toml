@@ -42,7 +42,7 @@ optional-dependencies.build = [ "build", "commitizen", "twine", "wheel" ]
 optional-dependencies.dev = [
     "lazyscribe-joblib[build]",
     "lazyscribe-joblib[qa]",
-    "lazyscribe-joblib[tests]",
+    "lazyscribe-joblib[tests]"
 ]
 optional-dependencies.qa = [
     "edgetest",
@@ -55,8 +55,8 @@ optional-dependencies.qa = [
     "uv",
 ]
 optional-dependencies.tests = [ "pytest", "pytest-cov", "scikit-learn", "time-machine" ]
-urls."Documentation" = "https://github.com/lazyscribe/lazyscribe-joblib"
-urls."Repository" = "https://github.com/lazyscribe/lazyscribe-joblib"
+urls.Documentation = "https://github.com/lazyscribe/lazyscribe-joblib"
+urls.Repository = "https://github.com/lazyscribe/lazyscribe-joblib"
 entry-points."lazyscribe.artifact_type".joblib = "lazyscribe_joblib:JoblibArtifact"
 
 [tool.uv]
