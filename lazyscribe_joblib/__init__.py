@@ -22,7 +22,7 @@ except ImportError:
 __all__: list[str] = ["JoblibArtifact"]
 
 
-@define(auto_attribs=True)  # noqa: RUF067
+@define(auto_attribs=True, getstate_setstate=False)  # noqa: RUF067
 class JoblibArtifact(Artifact):
     """Handler for pickle-serializable objects through ``joblib`` package.
 
