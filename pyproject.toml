@@ -13,7 +13,9 @@ authors = [
 ]
 requires-python = ">=3.10.0"
 classifiers = [
-    "Development Status :: 3 - Alpha",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
     "License :: OSI Approved :: MIT License",
     "Natural Language :: English",
     "Programming Language :: Python :: 3 :: Only",
@@ -21,6 +23,13 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: Free Threading :: 2 - Beta",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Software Development :: Documentation",
 ]
 dependencies = [
     "attrs<=26.1.0,>=21.2.0",
@@ -86,7 +95,7 @@ lint.preview = true
 column_width = 88
 indent = 4
 keep_full_version = true
-max_supported_python = "3.13"
+max_supported_python = "3.14"
 
 [tool.mypy]
 python_version = "3.10"
