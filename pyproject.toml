@@ -34,14 +34,14 @@ dependencies = [
     "attrs<=26.1.0,>=21.2.0",
     "importlib-metadata>=4.7; python_version<'3.11'",
     "joblib<=1.5.3,>=1.2.0",
-    "lazyscribe!=3,<=2.1.0,>=2.0.0",
+    "lazyscribe!=3,<=2.2.1,>=2.0.0",
     "python-slugify<=8.0.4,>=5.0.0",
 ]
 optional-dependencies.build = [ "build", "commitizen", "twine", "wheel" ]
 optional-dependencies.dev = [
     "lazyscribe-joblib[build]",
     "lazyscribe-joblib[qa]",
-    "lazyscribe-joblib[tests]"
+    "lazyscribe-joblib[tests]",
 ]
 optional-dependencies.qa = [
     "edgetest",
