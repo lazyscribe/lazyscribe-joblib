@@ -11,7 +11,7 @@ from lazyscribe._utils import utcnow
 from lazyscribe.artifacts.base import Artifact
 from slugify import slugify
 
-try:  # noqa: RUF067
+try:  # ruff: ignore[non-empty-init-module]
     # Python <= 3.10
     from importlib_metadata import packages_distributions
     from importlib_metadata import version as importlib_version
@@ -22,7 +22,7 @@ except ImportError:
 __all__: list[str] = ["JoblibArtifact"]
 
 
-@define(auto_attribs=True, getstate_setstate=False)  # noqa: RUF067
+@define(auto_attribs=True, getstate_setstate=False)  # ruff: ignore[non-empty-init-module]
 class JoblibArtifact(Artifact):
     """Handler for pickle-serializable objects through ``joblib`` package.
 
