@@ -34,8 +34,8 @@ dependencies = [
     "attrs<=26.1.0,>=21.2.0",
     "importlib-metadata>=4.7; python_version<'3.11'",
     "joblib<=1.6.0,>=1.2.0",
-    "lazyscribe!=3,<=2.2.2,>=2.0.0",
-    "python-slugify<=9.1.2,>=5.0.0",
+    "lazyscribe<3,>=2.0.0",
+    "python-slugify<=9.1.3,>=5.0.0",
 ]
 optional-dependencies.build = [ "commitizen", "uv" ]
 optional-dependencies.dev = [
@@ -101,21 +101,21 @@ keep_full_version = true
 max_supported_python = "3.14"
 
 [tool.mypy]
-python_version = "3.10"
-warn_return_any = true
-warn_unused_configs = true
 ignore_missing_imports = true
-allow_redefinition = true
+python_version = "3.10"
 check_untyped_defs = true
+warn_return_any = true
+allow_redefinition = true
+warn_unused_configs = true
 
 [tool.commitizen]
 version_provider = "uv"
-tag_format = "v$version"
-bump_message = "chore: version $current_version -> $new_version"
-update_changelog_on_bump = true
 version_files = [
     "lazyscribe_joblib/_meta.py:__version__",
 ]
+bump_message = "chore: version $current_version -> $new_version"
+tag_format = "v$version"
+update_changelog_on_bump = true
 
 [tool.edgetest]
 exclude_newer = "3 days"
